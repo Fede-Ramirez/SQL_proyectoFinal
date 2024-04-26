@@ -1,0 +1,1 @@
+Este archivo contiene el paso a paso para realizar la implementación de la base de datos

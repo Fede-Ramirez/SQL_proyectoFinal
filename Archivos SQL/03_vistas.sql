@@ -1,0 +1,52 @@
+USE SECONDARYSCHOOL_DATABASE;
+
+-- Vista que muestra los estudiantes que terminarán el secundario luego de 2026
+CREATE OR REPLACE VIEW VW_YOUNGEST_STUDENTS AS
+SELECT C.ID_COURSE AS ID_COURSE, S.FIRST_NAME AS STUDENT_NAME, S.LAST_NAME AS STUDENT_LAST_NAME
+FROM ACADEMIC_RECORD A
+JOIN STUDENTS S ON A.ID_STUDENT = S.ID_STUDENT
+JOIN COURSES C ON S.ID_COURSE = C.ID_COURSE
+WHERE A.FINISH_DATE > '2025-12-31';
+
+SELECT * FROM VW_YOUNGEST_STUDENTS;
+
+-- Vista que muestra la cantidad de estudiantes agrupados por tipo de evento, pero solo para aquellos casos donde haya más de un tipo de evento
+
+CREATE OR REPLACE VIEW VW_EVENT_TYPE AS
+SELECT ACADEMIC_EVENTS.EVENT_TYPE, COUNT(*) AS STUDENTS_QUANTITY
+FROM STUDENTS S
+JOIN ACADEMIC_EVENTS ON S.ID_STUDENT = ACADEMIC_EVENTS.ID_STUDENT
+GROUP BY ACADEMIC_EVENTS.EVENT_TYPE
+HAVING COUNT(*) > 1;
+
+SELECT * FROM VW_EVENT_TYPE;
+
+-- Vista que muestra los primeros 8 registros de la tabla TEACHERS específicando únicamente ID, NOMBRE, APELLIDO Y TÍTULO PROFESIONAL
+CREATE OR REPLACE VIEW VW_TEACHERS_LIMIT AS
+SELECT ID_TEACHER, FIRST_NAME, LAST_NAME, PROFESSIONAL_DEGREE 
+FROM TEACHERS
+LIMIT 8;
+
+SELECT * FROM VW_TEACHERS_LIMIT;
+
+-- Vista que muestra las calificaciones de los estudiantes ordenadas de mayor a menor, diferenciando bien quien aprobó y quién no
+CREATE OR REPLACE VIEW VW_MARKS_ORDER AS
+SELECT ID_STUDENT, ID_SUBJECT, MARK, SUBJECT_STATUS
+FROM MARKS
+ORDER BY MARK DESC;
+
+SELECT * FROM VW_MARKS_ORDER;
+
+-- Vista que muestra el nombre y apellido de estudiantes que superen 10 inasistencias en determinadas materias. 
+-- El orden estará determinado en forma ascendente.
+-- El estudiante que ocupe el primer registro será el de menor cantidad de ausencias considerando la condición establecida
+-- El estudiante que ocupe el último registro será el de mayor cantidad de ausencias considerando la condición establecida
+CREATE OR REPLACE VIEW VW_SUBJECTS_ATTENDANCE AS 
+SELECT STUDENTS.FIRST_NAME AS STUDENT_NAME, STUDENTS.LAST_NAME AS STUDENT_LAST_NAME, SUBJECTS.SUBJECT_NAME AS SUBJECT_NAME
+FROM ATTENDANCE 
+JOIN STUDENTS ON STUDENTS.ID_STUDENT = ATTENDANCE.ID_STUDENT
+JOIN SUBJECTS ON SUBJECTS.ID_SUBJECT = ATTENDANCE.ID_SUBJECT
+WHERE ATTENDANCE.ABSENCE_NUMBER > 10
+ORDER BY ATTENDANCE.ABSENCE_NUMBER ASC;
+
+ SELECT * FROM VW_SUBJECTS_ATTENDANCE;
