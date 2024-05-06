@@ -1,1 +1,19 @@
-Este archivo contiene el paso a paso para realizar la implementación de la base de datos
+Para instalar y utilizar la base de datos "secondaryschool_database" ingrese a la carpeta "Archivos SQL". Luego, comience a seguir el orden de los archivos presentados. Cada archivo tiene un número asignado para que pueda realizar la ejecución de los mismos en orden. A continuación, lea detenidamente el procedimiento y cuidadosamente siga el paso a paso:
+
+1) Utilizando la herramienta MySQL Workbench abra y ejecute el archivo 01_creacion_tablas.sql para crear las tablas correspondientes a la base de datos. 
+
+2) Abra y ejecute el archivo 02_insercion_datos.sql para insertar los datos en cada tabla. Considere que las tablas Courses, Students, Subjects, Teachers y Marks tienen su propio script de inserción SQL listos para ejecutar. En cambio, para las tablas restantes (Attendance, Academic_record, Academic_events, Enrolments, Monthly_fees) deberá realizar la inserción mediante importación. Dirijase a cualquiera de estas tablas en el panel de control de Schemas a la izquierda de la herramienta MySQL Workbench. Presione el tercer ícono (similar a una grilla) para consultar la información de la tabla (estará vacía). Entonces, en la barra de herramientas de la grilla de resultados presiones el segundo ícono que está al lado de Export/Import. Escoja el archivo CSV correspondiente a la tabla en la que desea insertar datos, elija la opción de utilizar una tabla existente (ya fue creada en el paso 1), configure los campos para que la visualización de los datos de la tabla sea la adecuada y proceda a realizar el proceso de importación. Repita este procedimiento hasta utilizar todos los archivos CSV proporcionados en la carpeta Archivos CSV.
+
+3) Abra y ejecute el archivo 03_vistas.sql para crear las 5 views proporcionadas. Al final del archivo tendrá los scripts del tipo SELECT para corroborar que cada view cumple su objetivo adecuadamente.
+
+4) Abra y ejecute el archivo 04_funciones.sql para crear las 2 funciones proporcionadas. Al final del archivo tendrá los scripts del tipo SELECT para realizar el testing de cada función y corroborar que funcionen correctamente.
+
+5) Abra y ejecute el archivo 05_stored_procedures.sql para crear los 2 stored procedures brindados. Al final del archivo tendrá los scripts del tipo CALL para realizar la prueba de funcionalidad de cada stored procedure y corroborar su correcto funcionamiento.
+
+6) Abra y ejecute el archivo 06_triggers.sql para crear los 2 triggers y las 2 tablas de auditoría brindados. Al final del archivo tendrá disponible los scripts para poner a prueba los triggers y verificar como se guardan los datos en la tablas de auditoría.
+
+7) Abra y ejecute el archivo 07_users.sql para crear y otorgar permisos a distintos usuarios. Podrá observar como algunos usuarios tienen más libertades o accesos en la base de datos que otros (en función de los permisos otorgados).
+
+8) Abra y ejecute el archivo 08_tcl.sql para trabajar con sublenguaje tcl. Podrá dar uso a sentencias o scripts asociados a savepoints, rollbacks (deshacer acciones) y commits (confirmar acciones).
+
+9) Abra el archivo 09_backup.sql y visualice el código asociado al back-up de los datos de la base de datos. Ejecute el archivo únicamente si necesita realizar un back-up de los datos.
