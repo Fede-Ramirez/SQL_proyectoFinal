@@ -1,16 +1,16 @@
-ID_RECORD;ID_STUDENT;START_DATE;FINISH_DATE;SCHOOL_DIPLOMA
-1;6;2019-03-01;2024-11-29;Bachiller en Ciencias Sociales y Humanidades
-2;12;2019-03-01;2024-11-29;Bachiller en Ciencias Naturales y Exactas
-3;5;2020-03-02;2025-11-28;Bachiller en Ciencias Económicas 
-4;13;2020-03-02;2025-11-28;Bachiller en Ciencias Económicas 
-5;3;2021-03-01;2026-11-27;Bachiller en Ciencias Naturales y Exactas
-6;10;2021-03-01;2026-11-27;Bachiller en Ciencias Sociales y Humanidades
-7;4;2022-03-01;2027-11-30;Bachillerato
-8;8;2022-03-01;2027-11-30;Bachillerato
-9;14;2022-03-01;2027-11-30;Bachillerato
-10;2;2023-03-01;2028-11-30;Bachillerato
-11;9;2023-03-01;2028-11-30;Bachillerato
-12;15;2023-03-01;2028-11-30;Bachillerato
-13;1;2024-03-01;2029-11-30;Bachillerato
-14;7;2024-03-01;2029-11-30;Bachillerato
-15;11;2024-03-01;2029-11-30;Bachillerato
+ID_RECORD;ID_STUDENT;SCHOOL_DIPLOMA;START_DATE;FINISH_DATE
+1;6;Bachiller en Ciencias Sociales y Humanidades;2019-03-01;2024-11-29
+2;12;Bachiller en Ciencias Naturales y Exactas;2019-03-01;2024-11-29
+3;5;Bachiller en Ciencias Económicas ;2020-03-02;2025-11-28
+4;13;Bachiller en Ciencias Económicas ;2020-03-02;2025-11-28
+5;3;Bachiller en Ciencias Naturales y Exactas;2021-03-01;2026-11-27
+6;10;Bachiller en Ciencias Sociales y Humanidades;2021-03-01;2026-11-27
+7;4;Bachillerato;2022-03-01;2027-11-30
+8;8;Bachillerato;2022-03-01;2027-11-30
+9;14;Bachillerato;2022-03-01;2027-11-30
+10;2;Bachillerato;2023-03-01;2028-11-30
+11;9;Bachillerato;2023-03-01;2028-11-30
+12;15;Bachillerato;2023-03-01;2028-11-30
+13;1;Bachillerato;2024-03-01;2029-11-30
+14;7;Bachillerato;2024-03-01;2029-11-30
+15;11;Bachillerato;2024-03-01;2029-11-30
