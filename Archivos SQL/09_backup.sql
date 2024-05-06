@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `secondaryschool_database` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `secondaryschool_database`;
 -- MySQL dump 10.13  Distrib 8.0.36, for Win64 (x86_64)
 --
 -- Host: localhost    Database: secondaryschool_database
@@ -33,7 +31,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `academic_record` WRITE;
 /*!40000 ALTER TABLE `academic_record` DISABLE KEYS */;
-INSERT INTO `academic_record` VALUES (1,6,'2019-03-01','2024-11-29','Bachiller en Ciencias Sociales y Humanidades'),(2,12,'2019-03-01','2024-11-29','Bachiller en Ciencias Naturales y Exactas'),(3,5,'2020-03-02','2025-11-28','Bachiller en Ciencias Económicas '),(4,13,'2020-03-02','2025-11-28','Bachiller en Ciencias Económicas '),(5,3,'2021-03-01','2026-11-27','Bachiller en Ciencias Naturales y Exactas'),(6,10,'2021-03-01','2026-11-27','Bachiller en Ciencias Sociales y Humanidades'),(7,4,'2022-03-01','2027-11-30','Bachillerato'),(8,8,'2022-03-01','2027-11-30','Bachillerato'),(9,14,'2022-03-01','2027-11-30','Bachillerato'),(10,2,'2023-03-01','2028-11-30','Bachillerato'),(11,9,'2023-03-01','2028-11-30','Bachillerato'),(12,15,'2023-03-01','2028-11-30','Bachillerato'),(13,1,'2024-03-01','2029-11-30','Bachillerato'),(14,7,'2024-03-01','2029-11-30','Bachillerato'),(15,11,'2024-03-01','2029-11-30','Bachillerato');
+INSERT INTO `academic_record` VALUES (1,6,'Bachiller en Ciencias Sociales y Humanidades','2019-03-01','2024-11-29'),(2,12,'Bachiller en Ciencias Naturales y Exactas','2019-03-01','2024-11-29'),(3,5,'Bachiller en Ciencias Económicas ','2020-03-02','2025-11-28'),(4,13,'Bachiller en Ciencias Económicas ','2020-03-02','2025-11-28'),(5,3,'Bachiller en Ciencias Naturales y Exactas','2021-03-01','2026-11-27'),(6,10,'Bachiller en Ciencias Sociales y Humanidades','2021-03-01','2026-11-27'),(7,4,'Bachillerato','2022-03-01','2027-11-30'),(8,8,'Bachillerato','2022-03-01','2027-11-30'),(9,14,'Bachillerato','2022-03-01','2027-11-30'),(10,2,'Bachillerato','2023-03-01','2028-11-30'),(11,9,'Bachillerato','2023-03-01','2028-11-30'),(12,15,'Bachillerato','2023-03-01','2028-11-30'),(13,1,'Bachillerato','2024-03-01','2029-11-30'),(14,7,'Bachillerato','2024-03-01','2029-11-30'),(15,11,'Bachillerato','2024-03-01','2029-11-30');
 /*!40000 ALTER TABLE `academic_record` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -63,7 +61,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `enrolments` WRITE;
 /*!40000 ALTER TABLE `enrolments` DISABLE KEYS */;
-INSERT INTO `enrolments` VALUES (1,6,16,'2024-02-21',50000,'Abonado'),(2,12,18,'2024-02-21',50000,'Abonado'),(3,5,13,'2024-02-21',50000,'Abonado'),(4,13,15,'2024-02-21',50000,'Abonado'),(5,3,10,'2024-02-29',50000,'Abonado'),(6,10,11,'2024-02-21',50000,'Abonado'),(7,4,7,'2024-02-21',50000,'Abonado'),(8,8,8,'2024-02-21',50000,'Abonado'),(9,14,9,'2024-02-21',50000,'Abonado'),(10,2,4,'2024-02-21',50000,'Abonado'),(11,9,5,'2024-02-29',50000,'Abonado'),(12,15,6,'2024-02-21',50000,'Abonado'),(13,1,1,'2024-02-21',50000,'Abonado'),(14,7,2,'2024-02-21',50000,'Abonado'),(15,11,3,'2024-02-29',50000,'No abonado');
+INSERT INTO `enrolments` VALUES (1,6,16,50000.00,'Abonado','2024-02-20'),(2,12,18,50000.00,'Abonado','2024-02-21'),(3,5,13,50000.00,'Abonado','2024-02-22'),(4,13,15,50000.00,'Abonado','2024-02-24'),(5,3,10,50000.00,'Abonado','2024-02-29'),(6,10,11,50000.00,'Abonado','2024-03-01'),(7,4,7,50000.00,'Abonado','2024-03-03'),(8,8,8,50000.00,'Abonado','2024-02-26'),(9,14,9,50000.00,'Abonado','2024-02-28'),(10,2,4,50000.00,'Abonado','2024-02-19'),(11,9,5,50000.00,'Abonado','2024-02-29'),(12,15,6,50000.00,'Abonado','2024-02-18'),(13,1,1,50000.00,'Abonado','2024-02-23'),(14,7,2,50000.00,'Abonado','2024-02-21'),(15,11,3,50000.00,'No abonado','2024-02-29');
 /*!40000 ALTER TABLE `enrolments` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -73,7 +71,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `log_teacher_audit` WRITE;
 /*!40000 ALTER TABLE `log_teacher_audit` DISABLE KEYS */;
-INSERT INTO `log_teacher_audit` VALUES (1,19,'Javier','Morales','INSERT','TEACHERS','root@localhost','2024-04-01'),(2,20,'Diana','Petrone','INSERT','TEACHERS','root@localhost','2024-04-01');
+INSERT INTO `log_teacher_audit` VALUES (1,19,'Javier','Morales','INSERT','TEACHERS','root@localhost','2024-05-05'),(2,20,'Diana','Petrone','INSERT','TEACHERS','root@localhost','2024-05-05');
 /*!40000 ALTER TABLE `log_teacher_audit` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -83,7 +81,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `log_teacher_audit_2` WRITE;
 /*!40000 ALTER TABLE `log_teacher_audit_2` DISABLE KEYS */;
-INSERT INTO `log_teacher_audit_2` VALUES (1,'NEW FIELD : Moreno  -  OLDFIELD : Morales','UPDATE','TEACHERS',NULL,'2024-04-01'),(2,'NEW FIELD : Martinez  -  OLDFIELD : Moreno ','UPDATE','TEACHERS','root@localhost','2024-04-01');
+INSERT INTO `log_teacher_audit_2` VALUES (1,'NEW FIELD : Martinez  -  OLDFIELD : Morales','UPDATE','TEACHERS','root@localhost','2024-05-05');
 /*!40000 ALTER TABLE `log_teacher_audit_2` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -93,7 +91,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `marks` WRITE;
 /*!40000 ALTER TABLE `marks` DISABLE KEYS */;
-INSERT INTO `marks` VALUES (1,7,15,5,'2023-12-15','Desaprobado'),(2,6,1,1,'2023-12-15','Desaprobado'),(3,8,14,10,'2023-12-15','Aprobado'),(4,5,2,4,'2023-12-15','Desaprobado'),(5,9,3,6,'2023-12-15','Desaprobado'),(6,4,13,3,'2022-12-14','Desaprobado'),(7,10,4,7,'2022-12-14','Aprobado'),(8,3,12,2,'2022-12-14','Desaprobado'),(9,11,5,8,'2022-12-14','Aprobado'),(10,2,11,9,'2022-12-14','Aprobado'),(11,12,6,5,'2021-12-13','Desaprobado'),(12,1,10,7,'2021-12-13','Aprobado'),(13,13,7,3,'2021-12-13','Desaprobado'),(14,14,9,9,'2021-12-13','Aprobado'),(15,15,8,10,'2021-12-13','Aprobado');
+INSERT INTO `marks` VALUES (1,7,15,5.00,'Desaprobado','2023-12-15'),(2,6,1,1.00,'Desaprobado','2023-12-16'),(3,8,14,10.00,'Aprobado','2023-12-17'),(4,5,2,4.00,'Desaprobado','2023-12-18'),(5,9,3,6.00,'Desaprobado','2023-12-19'),(6,4,13,3.00,'Desaprobado','2022-12-14'),(7,10,4,7.00,'Aprobado','2022-12-13'),(8,3,12,2.00,'Desaprobado','2022-12-12'),(9,11,5,8.00,'Aprobado','2022-12-11'),(10,2,11,9.00,'Aprobado','2022-12-10'),(11,12,6,5.00,'Desaprobado','2021-12-20'),(12,1,10,7.00,'Aprobado','2021-12-09'),(13,13,7,3.00,'Desaprobado','2021-12-18'),(14,14,9,9.00,'Aprobado','2021-12-08'),(15,15,8,10.00,'Aprobado','2021-12-16');
 /*!40000 ALTER TABLE `marks` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -103,7 +101,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `monthly_fees` WRITE;
 /*!40000 ALTER TABLE `monthly_fees` DISABLE KEYS */;
-INSERT INTO `monthly_fees` VALUES (1,6,100000,'0%',0),(2,12,100000,'0%',0),(3,5,100000,'0%',0),(4,13,100000,'0%',0),(5,3,100000,'0%',100000),(6,10,75000,'25%',0),(7,4,100000,'0%',0),(8,8,100000,'0%',0),(9,14,100000,'0%',0),(10,2,100000,'0%',0),(11,9,25000,'75%',0),(12,15,100000,'0%',100000),(13,1,100000,'0%',0),(14,7,100000,'0%',0),(15,11,50000,'50%',0);
+INSERT INTO `monthly_fees` VALUES (1,6,100000.00,'0%',0.00),(2,12,100000.00,'0%',0.00),(3,5,100000.00,'0%',0.00),(4,13,100000.00,'0%',0.00),(5,3,100000.00,'0%',100000.00),(6,10,75000.00,'25%',0.00),(7,4,100000.00,'0%',0.00),(8,8,100000.00,'0%',0.00),(9,14,100000.00,'0%',0.00),(10,2,100000.00,'0%',0.00),(11,9,25000.00,'75%',0.00),(12,15,100000.00,'0%',100000.00),(13,1,100000.00,'0%',0.00),(14,7,100000.00,'0%',0.00),(15,11,50000.00,'50%',0.00);
 /*!40000 ALTER TABLE `monthly_fees` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -113,7 +111,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `students` WRITE;
 /*!40000 ALTER TABLE `students` DISABLE KEYS */;
-INSERT INTO `students` VALUES (1,1,'Federico','Ramirez','2012-11-22','Calle 275 3462','federamirez@gmail.com'),(2,4,'Victoria','Ruiz','2011-12-03','Avenida Rivadavia 123','victoriaruiz@gmail.com'),(3,10,'Esteban','Baez','2009-01-14','Pasteur 456','estebanbaez@gmail.com'),(4,7,'Patricia','Arce','2010-02-25','Trinidad 789','patriciaarce@gmail.com'),(5,13,'Ramiro','Almada','2008-03-06','Ramon Diaz 223','ramiroalmada@gmail.com'),(6,16,'Bárbara','Lopez','2007-04-17','Carlos Paz 621','barbaralopez@gmail.com'),(7,2,'Ulises','Rial','2012-05-28','Holanda 218','ulisesrial@gmail.com'),(8,8,'Gabriela','Lammens','2010-06-09','Tennese 3290','gabrielalammens@gmail.com'),(9,5,'Tobías','Ortega','2011-07-10','Avenida Ortiz 4301','tobiasortega@gmail.com'),(10,11,'Olga','Nievas','2009-08-21','Deheza 541','olganievas@gmail.com'),(11,3,'Lautaro','Donda','2012-09-02','Lugones 652','dondalautaro@hotmail.com'),(12,18,'Denisse','Flores','2007-10-13','Avenida Saenz Peña 7632','floresdenisse@outlook.com'),(13,15,'Santiago','Soria','2008-11-24','Flores 763','santisoria@yahoo.com'),(14,9,'Lara','Narvaes','2010-12-05','Avenida Martín García 874','narvaeslara@gmail.com'),(15,6,'Pedro','Fernandez','2011-01-16','Moreno 985','fernandezpedro@gmail.com'),(16,16,'Malena','Peréz','2007-07-02','Avenida Juan Domingo Perón 207','perezmale@gmail.com');
+INSERT INTO `students` VALUES (1,1,'Federico','Ramirez','Calle 275 3462','federamirez@gmail.com','2012-11-22'),(2,4,'Victoria','Ruiz','Avenida Rivadavia 123','victoriaruiz@gmail.com','2011-12-03'),(3,10,'Esteban','Baez','Pasteur 456','estebanbaez@gmail.com','2009-01-14'),(4,7,'Patricia','Arce','Trinidad 789','patriciaarce@gmail.com','2010-02-25'),(5,13,'Ramiro','Almada','Ramon Diaz 223','ramiroalmada@gmail.com','2008-03-06'),(6,16,'Bárbara','Lopez','Carlos Paz 621','barbaralopez@gmail.com','2007-04-17'),(7,2,'Ulises','Rial','Holanda 218','ulisesrial@gmail.com','2012-05-28'),(8,8,'Gabriela','Lammens','Tennese 3290','gabrielalammens@gmail.com','2010-06-09'),(9,5,'Tobías','Ortega','Avenida Ortiz 4301','tobiasortega@gmail.com','2011-07-10'),(10,11,'Olga','Nievas','Deheza 541','olganievas@gmail.com','2009-08-21'),(11,3,'Lautaro','Donda','Lugones 652','dondalautaro@hotmail.com','2012-09-02'),(12,18,'Denisse','Flores','Avenida Saenz Peña 7632','floresdenisse@outlook.com','2007-10-13'),(13,15,'Santiago','Soria','Flores 763','santisoria@yahoo.com','2008-11-24'),(14,9,'Lara','Narvaes','Avenida Martín García 874','narvaeslara@gmail.com','2010-12-05'),(15,6,'Pedro','Fernandez','Moreno 985','fernandezpedro@gmail.com','2011-01-16'),(16,16,'Malena','Peréz','Avenida Juan Domingo Perón 207','perezmale@gmail.com','2007-07-02'),(25,5,'Leandro','Dimitri','Pasteur 143','leandimitri@gmail.com','2011-05-05'),(26,3,'Tamara','Iguacel','Astillas 274','tamiiguacel@gmail.com','2012-06-14'),(27,10,'Bautista','Freire','Deheza 1436','freirebauti@hotmail.com','2009-01-25'),(28,14,'Lourdes','Baez','Polonia 471','baezlour@hotmail.com','2008-04-17'),(29,7,'Hernan','Urtizberea','Colonia 6568','hernanurtiz@gmail.com','2010-05-03'),(30,17,'Mora','Lopez','Las Heras 910','lopezmora@outlook.com','2007-07-07'),(31,6,'Armando','Juarez','Victoria 54','armandojuarez@yahoo.com','2011-10-22'),(32,12,'Viviana','Colman','Martinto 1500','vivicolman@gmail.com','2009-09-12');
 /*!40000 ALTER TABLE `students` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -123,7 +121,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `subjects` WRITE;
 /*!40000 ALTER TABLE `subjects` DISABLE KEYS */;
-INSERT INTO `subjects` VALUES (1,'Matemática'),(2,'Biología'),(3,'Historia'),(4,'Construcción de la Ciudadanía'),(5,'Prácticas del Lenguaje'),(6,'Literatura'),(7,'Educación Física'),(8,'Inglés'),(9,'Educación Artística'),(10,'Economía Política'),(11,'Filosofía'),(12,'Físico-Química'),(13,'Física'),(17,'Química'),(18,'Informática'),(19,'Salud y Adolescencia');
+INSERT INTO `subjects` VALUES (1,'Matemática'),(2,'Biología'),(3,'Historia'),(4,'Construcción de la Ciudadanía'),(5,'Prácticas del Lenguaje'),(6,'Literatura'),(7,'Educación Física'),(8,'Inglés'),(9,'Educación Artística'),(10,'Economía Política'),(11,'Filosofía'),(12,'Físico-Química'),(13,'Física'),(16,'Química'),(17,'Informática'),(18,'Salud y Adolescencia');
 /*!40000 ALTER TABLE `subjects` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -146,4 +144,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-05-05  0:12:51
+-- Dump completed on 2024-05-05 21:53:29
